@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(242, 242, 242);
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+p {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+}
+
+#bikinjaditengah {
+    text-align: center;
+    font-size: xx-small;
+}
+
+.buatjaditengah {
+    text-align: center;
+    font-size: xx-small;
+}
+
+.judulberita {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(23, 89, 203);
+}
+
+.footerbold {
+    font-weight: bold;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+}
+
+.judulgambar {
+    text-align: center;
+    font-size: x-small;
+}
+
+a:link {
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.formatgambar {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

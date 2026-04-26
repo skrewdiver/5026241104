@@ -15,8 +15,36 @@ Route::get('blog', function () {
 	return view('blog');
 });
 
-Route::get('dell', function () {
+Route::get('pertemuan1', function () {
+	return view('pertemuan1');
+});
+
+Route::get('pertemuan2', function () {
+	return view('pertemuan2');
+});
+
+Route::get('pertemuan3', function () {
+	return view('pertemuan3');
+});
+
+Route::get('bootstrap', function () {
+	return view('bootstrap');
+});
+
+Route::get('pertemuan4', function () {
+	return view('pertemuan4');
+});
+
+Route::get('pertemuan5', function () {
 	return view('pertemuan5');
+});
+
+Route::get('menu', function () {
+	return view('menu');
+});
+
+Route::get('linktree', function () {
+	return view('linktree');
 });
 
 Route::get('dosen', [DosenController::class, 'index']);
