@@ -28,10 +28,10 @@
             <a class="nav-link" href="/modem">Modem</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/keranjang">D4</a>
+            <a class="nav-link" href="/keranjang">PR 2</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">E5</a>
+            <a class="nav-link" href="/nilai">PR 3</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">EAS</a>

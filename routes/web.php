@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\ModemDBController;
+use App\Http\Controllers\NilaiKuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,6 +89,10 @@ Route::get('/keranjang/beli', [BelanjaController::class, 'beli'])->name('keranja
 Route::post('/keranjang/store', [BelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::get('/keranjang/batal/{id}', [BelanjaController::class, 'batal']);
 
+//route CRUD nilai kuliah
+route::get('/nilai', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
+route::get('/nilai/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
+route::post('/nilai/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
