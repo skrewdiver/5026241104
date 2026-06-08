@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\ModemDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -64,6 +65,14 @@ Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 
+//route CRUD modem
+Route::get('/modem', [ModemDBController::class, 'index'])->name('modem.index');
+Route::get('/modem/tambah', [ModemDBController::class, 'tambah'])->name('modem.tambah');
+Route::post('/modem/store', [ModemDBController::class, 'store'])->name('modem.store');
+Route::get('/modem/edit/{id}', [ModemDBController::class, 'edit'])->name('modem.edit');
+Route::post('/modem/update', [ModemDBController::class, 'update'])->name('modem.update');
+Route::get('/modem/hapus/{id}', [ModemDBController::class, 'hapus'])->name('modem.hapus');
+Route::get('/modem/cari', [ModemDBController::class, 'cari'])->name('modem.cari');
 
 //route CRUD siswa
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
