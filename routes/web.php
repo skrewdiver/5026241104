@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BelanjaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -71,6 +72,12 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//route CRUD keranjangbelanja
+Route::get('/keranjang', [BelanjaController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjang/beli', [BelanjaController::class, 'beli'])->name('keranjangbelanja.beli');
+Route::post('/keranjang/store', [BelanjaController::class, 'store'])->name('keranjangbelanja.store');
+Route::get('/keranjang/batal/{id}', [BelanjaController::class, 'batal']);
 
 
 Route::get('dosen', [DosenController::class, 'index']);
