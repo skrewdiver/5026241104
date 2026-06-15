@@ -8,6 +8,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\ModemDBController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\TagihanAirController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -93,6 +94,11 @@ Route::get('/keranjang/batal/{id}', [BelanjaController::class, 'batal']);
 route::get('/nilai', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
 route::get('/nilai/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
 route::post('/nilai/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+
+//route CRUD tagihan air
+Route::get('/eas', [TagihanAirController::class, 'index'])->name('tagihanair.index');
+Route::get('/eas/tambah', [TagihanAirController::class, 'tambah'])->name('tagihanair.tambah');
+route::post('/eas/store', [TagihanAirController::class, 'store'])->name('tagihanair.store');
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
